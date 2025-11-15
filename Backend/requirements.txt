@@ -1,0 +1,8 @@
+Flask
+Flask-Cors
+Flask-JWT-Extended
+mongoengine
+python-dotenv
+bcrypt
+Werkzeug
+cloudinary
