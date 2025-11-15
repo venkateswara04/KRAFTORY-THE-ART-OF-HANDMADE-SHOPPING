@@ -1,0 +1,113 @@
+/* Styles for the floating chat bubble */
+.chat-bubble {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #056635; /* Kraftory Green */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 9998;
+}
+
+/* The main chat window */
+.chat-window {
+  position: fixed;
+  bottom: 6.5rem;
+  right: 2rem;
+  width: 350px;
+  max-width: 90vw;
+  height: 450px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #e0e0e0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.chat-header h3 {
+  color: #333;
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+}
+
+.chat-body {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.message {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: #e2f0e9; /* Light green */
+  color: #333;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.message.ai {
+  background-color: #f1f1f1;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.chat-input-box {
+  display: flex;
+  border-top: 1px solid #e0e0e0;
+  padding: 0.5rem;
+}
+
+.chat-input-box input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+}
+
+.chat-input-box button {
+  background-color: #056635;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.chat-input-box button:disabled {
+  background-color: #999;
+}
